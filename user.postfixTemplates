@@ -1,0 +1,168 @@
+
+.ae : use assertEqual function
+    ANY  →  self.assertEqual($expr$, $END$)
+
+.at : use assertTrue function
+    ANY  →  self.assertTrue($expr$)$END$
+.af : use assertFalse function
+    ANY  →  self.assertFalse($expr$)$END$
+
+
+
+.enumerate : Enumerate value
+    ANY   →   enumerate($expr$)
+
+.abs : Get absolute value of a number
+    ANY   →   abs($expr$)$END$
+
+.round : Round number to the nearest integer
+    ANY   →   round($expr$)$END$
+
+.type : Get type of an object
+    ANY   →   type($expr$)$END$
+
+.reversed : Reverse iterable
+    ANY   →   reversed($expr$)
+
+.zip : Zip iterables
+    ANY   →   zip(*$expr$)$END$
+
+.all : Check all of the values in iterable are True
+    ANY   →   all($expr$)$END$
+
+.any : Check any of the values in iterable are True
+    ANY   →   any($expr$)$END$
+
+.min : Get min value in iterable
+    ANY   →   min($expr$)$END$
+
+.max : Get max value in iterable
+    ANY   →   max($expr$)$END$
+
+.sum : Sum itarable
+    ANY   →   sum($expr$)$END$
+
+.range : Iterate to an integer from 0
+    ANY   →   range($expr$)$END$
+
+.list : Convert to list from iterable
+    ANY   →   list($expr$)$END$
+
+.set : Convert to set from iterable
+    ANY   →   set($expr$)$END$
+
+.tuple : Convert to tuple from iterable
+    ANY   →   tuple($expr$)$END$
+
+.int : Convert to int from an object
+    ANY   →   int($expr$)$END$
+
+.sort : Sort iterable
+    ANY   →   sort($expr$)$END$
+
+.sortk : Sort iterable with key
+    ANY   →   sort($expr$, key=$key$)$END$
+
+.sortl : Sort iterable with lambda key
+    ANY   →   sort($expr$, key=lambda x: $key$)$END$
+
+.filter : Filter iterable
+    ANY   →   filter($first$, $expr$)$END$
+
+.filterl : Filter iterable with lambda
+    ANY   →   filter(lambda x: $first$, $expr$)$END$
+
+.map : Map iterable
+    ANY   →   map($first$, $expr$)$END$
+
+.mapl : Map iterable with lambda
+    ANY   →   map(lambda x: $first$, $expr$)$END$
+
+.open : Open a path
+    ANY   →   with open($expr$) as $file_name$:\
+    $END$
+
+.openm : Open a path with mode
+    ANY   →   with open($expr$, mode='$mode$') as $file_name$:\
+    $END$
+
+.openp : Open a Path object
+    ANY   →   with closing($expr$.open()) as $file_name$:\
+    $END$
+
+.for : Iterate through an object
+    ANY   →   for $var$ in $expr$:\
+    $END$
+
+.lc : Wrap with list comprehension
+    ANY   →   [$first$ for $second$ in $expr$]$END$
+
+.lcx : Wrap with list comprehension with x
+    ANY   →   [$first$ for x in $expr$]$END$
+
+.lcif : Wrap with list comprehension with if
+    ANY   →   [$first$ for $second$ in $expr$ if $cond$]$END$
+    $END$
+
+.lcxif : Wrap with list comprehension with x and if
+    ANY   →   [$first$ for x in $expr$ if $cond$]$END$
+    $END$
+
+.dc : Wrap with dict comprehension
+    ANY   →   {$first$:$second$ for $third$ in $expr$}$END$
+
+.dckv : Wrap with dict comprehension with k and v
+    ANY   →   {$first$:$second$ for k, v in $expr$}$END$
+
+.dcif : Wrap with dict comprehension with if
+    ANY   →   {$first$:$second$ for $third$ in $expr$ if $cond$}$END$
+
+.dckvif : Wrap with dict comprehension with k, v and if
+    ANY   →   {$first$:$second$ for k, v in $expr$ if $cond$}$END$
+
+.sc : Wrap with set comprehension
+    ANY   →   {$first$ for $second$ in $expr$}$END$
+
+.scx : Wrap with set comprehension with x
+    ANY   →   {$first$ for x in $expr$}$END$
+
+.scif : Wrap with set comprehension with if
+    ANY   →   {$first$ for $second$ in $expr$ if $cond$}$END$
+    $END$
+
+.scxif : Wrap with set comprehension with x and if
+    ANY   →   {$first$ for x in $expr$ if $cond$}$END$
+    $END$
+
+.gen : Wrap with generator expression
+    ANY   →   ($first$ for $second$ in $expr$)$END$
+    $END$
+
+.genx : Wrap with generator expression with x
+    ANY   →   ($first$ for x in $expr$)$END$
+    $END$
+
+.genif : Wrap with generator expression with if
+    ANY   →   ($first$ for $second$ in $expr$ if $cond$)$END$
+    $END$
+
+.genxif : Wrap with generator expression with x and if
+    ANY   →   ($first$ for x in $expr$ if $cond$)$END$
+    $END$
+
+.printf: Print an object with f-string
+    ANY   →   print(f'$END${$expr$}')
+
+.try : Wrap with try except
+    ANY   →   try:\
+    $expr$\
+except $error$ as $error_var$:\
+    $END$
+
+.tryf : Wrap with try except and finally
+    ANY   →   try:\
+    $expr$\
+except $error$ as $error_var$:\
+    $except$\
+finally:\
+    $END$
