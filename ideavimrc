@@ -38,7 +38,8 @@ nnoremap <C-C> <Esc>
 nnoremap <Leader>tt :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Leader>tfi :action IntroduceField<CR>
 nnoremap <Leader>tva :action IntroduceVariable<CR>
-nnoremap <Leader>tme :action IntroduceVariable<CR>
+nnoremap <Leader>tme :action ExtractMethod<CR>
+vnoremap <Leader>tme :action ExtractMethod<CR>
 nnoremap <Leader>tpa :action IntroduceParameter<CR>
 nnoremap <Leader>tsi :action ChangeSignature<CR>
 
