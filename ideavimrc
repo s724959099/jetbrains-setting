@@ -35,11 +35,16 @@ nnoremap tp gT
 
 nnoremap <C-C> <Esc>
 " Max 客製化
-nnoremap <Leader>rr :action Refactorings.QuickListPopupAction<CR>
-nnoremap <Leader>rri :action IntroduceField<CR>
-nnoremap <Leader>rvar :action IntroduceVariable<CR>
-nnoremap <Leader>rmet :action IntroduceVariable<CR>
-nnoremap <Leader>rpa :action IntroduceParameter<CR>
+nnoremap <Leader>tt :action Refactorings.QuickListPopupAction<CR>
+nnoremap <Leader>tfi :action IntroduceField<CR>
+nnoremap <Leader>tva :action IntroduceVariable<CR>
+nnoremap <Leader>tme :action IntroduceVariable<CR>
+nnoremap <Leader>tpa :action IntroduceParameter<CR>
+nnoremap <Leader>tsi :action ChangeSignature<CR>
+
+
+nnoremap d "_d
+vnoremap d "_d
 
 nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 nnoremap ge :action GotoNextError<CR>
