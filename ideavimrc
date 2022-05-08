@@ -35,7 +35,7 @@ nnoremap tp gT
 
 nnoremap <C-C> <Esc>
 " Max 客製化
-nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 nnoremap <Leader>vfa :action VimFindActionIdAction<CR>
