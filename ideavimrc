@@ -35,6 +35,12 @@ nnoremap tp gT
 
 nnoremap <C-C> <Esc>
 " Max 客製化
+nnoremap <Leader>rr :action Refactorings.QuickListPopupAction<CR>
+nnoremap <Leader>fi :action IntroduceField<CR>
+nnoremap <Leader>var :action IntroduceVariable<CR>
+nnoremap <Leader>met :action IntroduceVariable<CR>
+nnoremap <Leader>pa :action IntroduceParameter<CR>
+
 nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
@@ -43,6 +49,7 @@ nnoremap <Leader>ll :action ReformatCode<CR>
 nnoremap <Leader>zz :action Vcs.RollbackChangedLines<CR>
 nnoremap <Leader>es :action EditSourceInNewWindow<CR>
 
+" Max 客製化 END
 
 nnoremap <Leader>a :action GotoAction<CR>
 nnoremap gd :action GotoDeclaration<CR>
@@ -157,12 +164,12 @@ nnoremap <Leader>oi :action OptimizeImports<CR>
 
 nnoremap <Leader>pm :action ShowPopupMenu<CR>
 
-nnoremap <Leader>rc :action RunToCursor<CR>
-nnoremap <Leader>rC :action ChooseRunConfiguration<CR>
-nnoremap <Leader>re :action RenameElement<CR>
-nnoremap <Leader>rf :action RenameFile<CR>
+"nnoremap <Leader>rc :action RunToCursor<CR>
+"nnoremap <Leader>rC :action ChooseRunConfiguration<CR>
+"nnoremap <Leader>re :action RenameElement<CR>
+"nnoremap <Leader>rf :action RenameFile<CR>
 
-nnoremap <Leader>rr :action Rerun<CR>
+"nnoremap <Leader>rr :action Rerun<CR>
 
 nnoremap <Leader>se :action SearchEverywhere<CR>
 nnoremap <Leader>su :action ShowUsages<CR>
@@ -173,6 +180,5 @@ nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
 
 nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
-
 
 
