@@ -51,6 +51,9 @@ nnoremap <Tab> >
 
 nnoremap d "_d
 vnoremap d "_d
+nnoremap c "_c
+vnoremap c "_c
+
 
 nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 nnoremap ge :action GotoNextError<CR>
