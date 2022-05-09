@@ -50,6 +50,11 @@ nnoremap <Leader>tsi :action ChangeSignature<CR>
 vnoremap <Tab> > 
 nnoremap <Tab> > 
 
+vnoremap v<S-l> v$
+vnoremap v<S-l> v$
+nnoremap v<S-h> v^
+nnoremap v<S-h> v^
+
 
 
 nnoremap d "_d
