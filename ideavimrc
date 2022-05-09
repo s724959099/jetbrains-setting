@@ -13,11 +13,19 @@ set history=100000
 set clipboard=unnamed
 set ideajoin
 
+Plug 'https://github.com/tpope/vim-surround'
+set surround
+
+
+
+
+
+
+
 " clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
 
 nnoremap <Leader>fs :w<CR>
-nnoremap <Leader>f :action AceAction<CR>
 nnoremap <Leader>j :action AceTargetAction<CR>
 nnoremap <Leader>tv :action IntroduceVariable<CR>
 nnoremap <Leader>tf :action IntroduceField<CR>
@@ -36,6 +44,18 @@ nnoremap tp gT
 nnoremap <C-C> <Esc>
 " Max 客製化
 map <S-j> <Nop>
+set nocompatible
+vmap ( <Nop>
+vmap ) <Nop>
+nmap ( <Nop>
+nmap ) <Nop>
+map ( <Nop>
+map ) <Nop>
+
+map <Leader>ew cs
+
+nnoremap <a-h> gT
+nnoremap <a-l> gt
 
 
 nnoremap <Leader>tt :action Refactorings.QuickListPopupAction<CR>
@@ -47,9 +67,19 @@ vnoremap <Leader>tme :action ExtractMethod<CR>
 nnoremap <Leader>tpa :action IntroduceParameter<CR>
 nnoremap <Leader>tsi :action ChangeSignature<CR>
 nnoremap <Leader>tre :action RenameElement<CR>
+nnoremap <Leader>tsw :action SurroundWith<CR>
+vnoremap <Leader>tsw :action SurroundWith<CR>
+vnoremap <A-k> :action EditorSelectWord<CR>
+nnoremap <A-k> :action EditorSelectWord<CR>
+inoremap <A-k> :action EditorSelectWord<CR>
+vnoremap <A-j> :action EditorUnSelectWord<CR>
+nnoremap <A-j> :action EditorUnSelectWord<CR>
+inoremap <A-j> :action EditorUnSelectWord<CR>
+
+
 
 vnoremap <Tab> > 
-nnoremap <Tab> > 
+nnoremap <Tab> >
 
 vnoremap v<S-l> v$
 vnoremap v<S-l> v$
