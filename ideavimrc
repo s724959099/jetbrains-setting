@@ -46,6 +46,7 @@ nnoremap <Leader>tme :action ExtractMethod<CR>
 vnoremap <Leader>tme :action ExtractMethod<CR>
 nnoremap <Leader>tpa :action IntroduceParameter<CR>
 nnoremap <Leader>tsi :action ChangeSignature<CR>
+nnoremap <Leader>tre :action RenameElement<CR>
 
 vnoremap <Tab> > 
 nnoremap <Tab> > 
