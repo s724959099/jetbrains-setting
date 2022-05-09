@@ -35,6 +35,9 @@ nnoremap tp gT
 
 nnoremap <C-C> <Esc>
 " Max 客製化
+map <S-j> <Nop>
+
+
 nnoremap <Leader>tt :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Leader>tfi :action IntroduceField<CR>
 nnoremap <Leader>tva :action IntroduceVariable<CR>
