@@ -74,9 +74,12 @@ nnoremap <A-j> :action EditorUnSelectWord<CR>
 inoremap <A-j> :action EditorUnSelectWord<CR>
 
 
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
-vnoremap <Tab> > 
-nnoremap <Tab> >
 
 vnoremap v<S-l> v$
 vnoremap v<S-l> v$
