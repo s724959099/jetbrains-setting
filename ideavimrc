@@ -52,7 +52,9 @@ map <Leader>ew cs
 
 " tab operation
 nnoremap <a-h> gT
+inoremap <a-h> <C-o>:action EditorLineStart<CR>
 nnoremap <a-l> gt
+inoremap <a-l> <C-o>:action EditorLineEnd<CR>
 
 
 nnoremap <Leader>tt :action Refactorings.QuickListPopupAction<CR>
@@ -68,17 +70,11 @@ nnoremap <Leader>tsw :action SurroundWith<CR>
 vnoremap <Leader>tsw :action SurroundWith<CR>
 vnoremap <A-k> :action EditorSelectWord<CR>
 nnoremap <A-k> :action EditorSelectWord<CR>
-inoremap <A-k> :action EditorSelectWord<CR>
+inoremap <A-k> <C-o>:action EditorSelectWord<CR>
 vnoremap <A-j> :action EditorUnSelectWord<CR>
 nnoremap <A-j> :action EditorUnSelectWord<CR>
-inoremap <A-j> :action EditorUnSelectWord<CR>
+inoremap <A-j> <C-o>::action EditorUnSelectWord<CR>
 
-
-nnoremap <Tab> >>_
-nnoremap <S-Tab> <<_
-inoremap <S-Tab> <C-D>
-vnoremap <Tab> >gv
-vnoremap <S-Tab> <gv
 
 
 vnoremap v<S-l> v$
@@ -235,6 +231,6 @@ nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
 
-map <Leader>qq :source ~/.ideavimrc<CR> 
+map <Leader>qq :source ~/.ideavimrc<CR>
 
 
