@@ -78,9 +78,9 @@ inoremap <A-j> <C-o>::action EditorUnSelectWord<CR>
 
 
 vnoremap v<S-l> v$
-vnoremap v<S-l> v$
+nnoremap v<S-l> v$
 nnoremap v<S-h> v^
-nnoremap v<S-h> v^
+vnoremap v<S-h> v^
 
 
 
