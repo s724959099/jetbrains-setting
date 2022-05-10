@@ -38,7 +38,9 @@ nnoremap <Leader>tmv :action Move<CR>
 
 " Tab operation
 nnoremap tn gt
+nnoremap <A-h> gt
 nnoremap tp gT
+nnoremap <A-l> gT
 
 
 nnoremap <C-C> <Esc>
