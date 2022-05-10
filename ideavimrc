@@ -13,7 +13,7 @@ set history=100000
 set clipboard=unnamed
 set ideajoin
 
-plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/tpope/vim-surround'
 set surround
 
 
@@ -23,66 +23,65 @@ set surround
 
 
 " clear the highlighted search result
-nnoremap <leader>sc :nohlsearch<cr>
+nnoremap <Leader>sc :nohlsearch<CR>
 
-nnoremap <leader>fs :w<cr>
-nnoremap <leader>j :action acetargetaction<cr>
-nnoremap <leader>tv :action introducevariable<cr>
-nnoremap <leader>tf :action introducefield<cr>
-nnoremap <leader>tfp :action introducefunctionalparameter<cr>
-nnoremap <leader>tc :action introduceconstant<cr>
-nnoremap <leader>tem :action extractmethod<cr>
-nnoremap <leader>tre :action renameelement<cr>
-nnoremap <leader>tmv :action move<cr>
+nnoremap <Leader>fs :w<CR>
+nnoremap <Leader>j :action AceTargetAction<CR>
+nnoremap <Leader>tv :action IntroduceVariable<CR>
+nnoremap <Leader>tf :action IntroduceField<CR>
+nnoremap <Leader>tfp :action IntroduceFunctionalParameter<CR>
+nnoremap <Leader>tc :action IntroduceConstant<CR>
+nnoremap <Leader>tem :action ExtractMethod<CR>
+nnoremap <Leader>tre :action RenameElement<CR>
+nnoremap <Leader>tmv :action Move<CR>
 
+
+
+nnoremap <C-C> <Esc>
+" Max 客製化
+map <S-j> <Nop>
+set nocompatible
+vmap ( <Nop>
+vmap ) <Nop>
+nmap ( <Nop>
+nmap ) <Nop>
+map ( <Nop>
+map ) <Nop>
+
+map <Leader>ew cs
 
 " tab operation
 nnoremap <a-h> gT
 nnoremap <a-l> gt
 
 
-nnoremap <c-c> <esc>
-" max 客製化
-map <s-j> <nop>
-set nocompatible
-vmap ( <nop>
-vmap ) <nop>
-nmap ( <nop>
-nmap ) <nop>
-map ( <nop>
-map ) <nop>
-
-map <leader>ew cs
-
-
-
-nnoremap <leader>tt :action refactorings.quicklistpopupaction<cr>
-nnoremap <leader>tfi :action introducefield<cr>
-nnoremap <leader>tva :action introducevariable<cr>
-vnoremap <leader>tva :action introducevariable<cr>
-nnoremap <leader>tme :action extractmethod<cr>
-vnoremap <leader>tme :action extractmethod<cr>
-nnoremap <leader>tpa :action introduceparameter<cr>
-nnoremap <leader>tsi :action changesignature<cr>
-nnoremap <leader>tre :action renameelement<cr>
-nnoremap <leader>tsw :action surroundwith<cr>
-vnoremap <leader>tsw :action surroundwith<cr>
-vnoremap <a-k> :action editorselectword<cr>
-nnoremap <a-k> :action editorselectword<cr>
-inoremap <a-k> :action editorselectword<cr>
-vnoremap <a-j> :action editorunselectword<cr>
-nnoremap <a-j> :action editorunselectword<cr>
-inoremap <a-j> :action editorunselectword<cr>
+nnoremap <Leader>tt :action Refactorings.QuickListPopupAction<CR>
+nnoremap <Leader>tfi :action IntroduceField<CR>
+nnoremap <Leader>tva :action IntroduceVariable<CR>
+vnoremap <Leader>tva :action IntroduceVariable<CR>
+nnoremap <Leader>tme :action ExtractMethod<CR>
+vnoremap <Leader>tme :action ExtractMethod<CR>
+nnoremap <Leader>tpa :action IntroduceParameter<CR>
+nnoremap <Leader>tsi :action ChangeSignature<CR>
+nnoremap <Leader>tre :action RenameElement<CR>
+nnoremap <Leader>tsw :action SurroundWith<CR>
+vnoremap <Leader>tsw :action SurroundWith<CR>
+vnoremap <A-k> :action EditorSelectWord<CR>
+nnoremap <A-k> :action EditorSelectWord<CR>
+inoremap <A-k> :action EditorSelectWord<CR>
+vnoremap <A-j> :action EditorUnSelectWord<CR>
+nnoremap <A-j> :action EditorUnSelectWord<CR>
+inoremap <A-j> :action EditorUnSelectWord<CR>
 
 
 
-vnoremap <tab> > 
-nnoremap <tab> >
+vnoremap <Tab> > 
+nnoremap <Tab> >
 
-vnoremap v<s-l> v$
-vnoremap v<s-l> v$
-nnoremap v<s-h> v^
-nnoremap v<s-h> v^
+vnoremap v<S-l> v$
+vnoremap v<S-l> v$
+nnoremap v<S-h> v^
+nnoremap v<S-h> v^
 
 
 
@@ -92,144 +91,147 @@ nnoremap c "_c
 vnoremap c "_c
 
 
-nnoremap <c-z> :action toggledistractionfreemode<cr>
-nnoremap ge :action gotonexterror<cr>
-nnoremap ge :action gotopreviouserror<cr>
-nnoremap <leader>vfa :action vimfindactionidaction<cr>
-nnoremap <leader>ll :action reformatcode<cr>
-nnoremap <leader>zz :action vcs.rollbackchangedlines<cr>
-nnoremap <leader>es :action editsourceinnewwindow<cr>
+nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap <Leader>vfa :action VimFindActionIdAction<CR>
+nnoremap <Leader>ll :action ReformatCode<CR>
+nnoremap <Leader>zz :action Vcs.RollbackChangedLines<CR>
+nnoremap <Leader>es :action EditSourceInNewWindow<CR>
 
-" max 客製化 end
+" Max 客製化 END
 
-nnoremap <leader>a :action gotoaction<cr>
-nnoremap gd :action gotodeclaration<cr>
-nnoremap gi :action gotoimplementation<cr>
-nnoremap sj :action nextsplitter<cr>
-nnoremap sk :action prevsplitter<cr>
+nnoremap <Leader>a :action GotoAction<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap sj :action NextSplitter<CR>
+nnoremap sk :action PrevSplitter<CR>
 
 " project search
-nnoremap <leader>se :action searcheverywhere<cr>
-nnoremap <leader>pf :action gotofile<cr>
+nnoremap <Leader>se :action SearchEverywhere<CR>
+nnoremap <Leader>pf :action GotoFile<CR>
 
-nnoremap fu :action findusages<cr>
-nnoremap <leader>fu :action findusages<cr>
+nnoremap fu :action FindUsages<CR>
+nnoremap <Leader>fu :action FindUsages<CR>
 
-" quit normal mode
-nnoremap <leader>q  :q<cr>
-nnoremap <leader>q  :qa!<cr>
+" Quit normal mode
+nnoremap <Leader>q  :q<CR>
+nnoremap <Leader>Q  :qa!<CR>
 
-" move half page faster
-nnoremap <leader>d  <c-d>
-nnoremap <leader>u  <c-u>
+" Move half page faster
+nnoremap <Leader>d  <C-d>
+nnoremap <Leader>u  <C-u>
 
-" insert mode shortcut
-inoremap <c-h> <left>
-inoremap <c-j> <down>
-inoremap <c-k> <up>
-inoremap <c-l> <right>
-inoremap <c-a> <home>
-inoremap <c-e> <end>
-inoremap <c-d> <delete>
+" Insert mode shortcut
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-a> <Home>
+inoremap <C-e> <End>
+inoremap <C-d> <Delete>
 
-" quit insert mode
-inoremap jj <esc>
-inoremap jk <esc>
-inoremap kk <esc>
+" Quit insert mode
+inoremap jj <Esc>
+inoremap jk <Esc>
+inoremap kk <Esc>
 
-" quit visual mode
-vnoremap v <esc>
+" Quit visual mode
+vnoremap v <Esc>
 
-" move to the start of line
-nnoremap h ^
+" Move to the start of line
+nnoremap H ^
 
-" move to the end of line
-nnoremap l $
+" Move to the end of line
+nnoremap L $
 " use w + e
 "nnoremap w b
-"nnoremap e e
+"nnoremap e E
 
-" redo
-nnoremap u <c-r>
+" Redo
+nnoremap U <C-r>
 
-" yank to the end of line
-nnoremap y y$
+" Yank to the end of line
+nnoremap Y y$
 
 " quit ==> close current window
-nnoremap <leader>q <c-w>w
+nnoremap <Leader>q <C-W>w
 
-" window operation
-nnoremap <leader>ww <c-w>w
-nnoremap <leader>wd <c-w>c
-nnoremap <leader>wj <c-w>j
-nnoremap <leader>wk <c-w>k
-nnoremap <leader>wh <c-w>h
-nnoremap <leader>wl <c-w>l
-nnoremap <leader>ws <c-w>s
-nnoremap <leader>w- <c-w>s
-nnoremap <leader>wv <c-w>v
-nnoremap <leader>w\| <c-w>v
-nnoremap <leader>wm :action moveeditortooppositetabgroup<cr>
+" Window operation
+nnoremap <Leader>ww <C-W>w
+nnoremap <Leader>wd <C-W>c
+nnoremap <Leader>wj <C-W>j
+nnoremap <Leader>wk <C-W>k
+nnoremap <Leader>wh <C-W>h
+nnoremap <Leader>wl <C-W>l
+nnoremap <Leader>ws <C-W>s
+nnoremap <Leader>w- <C-W>s
+nnoremap <Leader>wv <C-W>v
+nnoremap <Leader>w\| <C-W>v
+nnoremap <Leader>wm :action MoveEditorToOppositeTabGroup<CR>
 
 
 " ==================================================
-" show all the provided actions via `:actionlist`
+" Show all the provided actions via `:actionlist`
 " ==================================================
 
 " built in search looks better
-nnoremap / :action find<cr>
+nnoremap / :action Find<CR>
 " but preserve ideavim search
-nnoremap <leader>/ /
+nnoremap <Leader>/ /
 
-nnoremap <leader>;; :action commentbylinecomment<cr>
+nnoremap <Leader>;; :action CommentByLineComment<CR>
 
-nnoremap <leader>bb :action togglelinebreakpoint<cr>
-nnoremap <leader>br :action viewbreakpoints<cr>
+nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
+nnoremap <Leader>br :action ViewBreakpoints<CR>
 
-nnoremap <leader>cv :action changeview<cr>
+nnoremap <Leader>cv :action ChangeView<CR>
 
-nnoremap <leader>cd :action choosedebugconfiguration<cr>
+nnoremap <Leader>cd :action ChooseDebugConfiguration<CR>
 
-nnoremap ga :action gotoaction<cr>
-nnoremap gc :action gotoclass<cr>
-nnoremap gd :action gotodeclaration<cr>
-nnoremap gf :action gotofile<cr>
-nnoremap gi :action gotoimplementation<cr>
-nnoremap gs :action gotosymbol<cr>
+nnoremap ga :action GotoAction<CR>
+nnoremap gc :action GotoClass<CR>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gf :action GotoFile<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSymbol<CR>
 
-nnoremap <leader>ga :action gotoaction<cr>
-nnoremap <leader>gc :action gotoclass<cr>
-nnoremap <leader>gd :action gotodeclaration<cr>
-nnoremap <leader>gf :action gotofile<cr>
-nnoremap <leader>gi :action gotoimplementation<cr>
-nnoremap <leader>gs :action gotosymbol<cr>
-nnoremap <leader>gt :action gototest<cr>
+nnoremap <Leader>ga :action GotoAction<CR>
+nnoremap <Leader>gc :action GotoClass<CR>
+nnoremap <Leader>gd :action GotoDeclaration<CR>
+nnoremap <Leader>gf :action GotoFile<CR>
+nnoremap <Leader>gi :action GotoImplementation<CR>
+nnoremap <Leader>gs :action GotoSymbol<CR>
+nnoremap <Leader>gt :action GotoTest<CR>
 
-nnoremap <leader>fp :action showfilepath<cr>
+nnoremap <Leader>fp :action ShowFilePath<CR>
 
-nnoremap <leader>ic :action inspectcode<cr>
+nnoremap <Leader>ic :action InspectCode<CR>
 
-nnoremap <leader>mv :action activatemavenprojectstoolwindow<cr>
+nnoremap <Leader>mv :action ActivateMavenProjectsToolWindow<CR>
 
-nnoremap <leader>oi :action optimizeimports<cr>
+nnoremap <Leader>oi :action OptimizeImports<CR>
 
-nnoremap <leader>pm :action showpopupmenu<cr>
+nnoremap <Leader>pm :action ShowPopupMenu<CR>
 
-"nnoremap <leader>rc :action runtocursor<cr>
-"nnoremap <leader>rc :action chooserunconfiguration<cr>
-"nnoremap <leader>re :action renameelement<cr>
-"nnoremap <leader>rf :action renamefile<cr>
+"nnoremap <Leader>rc :action RunToCursor<CR>
+"nnoremap <Leader>rC :action ChooseRunConfiguration<CR>
+"nnoremap <Leader>re :action RenameElement<CR>
+"nnoremap <Leader>rf :action RenameFile<CR>
 
-"nnoremap <leader>rr :action rerun<cr>
+"nnoremap <Leader>rr :action Rerun<CR>
 
-nnoremap <leader>se :action searcheverywhere<cr>
-nnoremap <leader>su :action showusages<cr>
-nnoremap <leader>tc :action closeactivetab<cr>
-nnoremap <leader>si :action stepinto<cr>
+nnoremap <Leader>se :action SearchEverywhere<CR>
+nnoremap <Leader>su :action ShowUsages<CR>
+nnoremap <Leader>tc :action CloseActiveTab<CR>
+nnoremap <Leader>si :action StepInto<CR>
 
-nnoremap <leader>tb :action togglelinebreakpoint<cr>
+nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
 
-nnoremap <leader>tl vy<cr>:action activateterminaltoolwindow<cr>
-vnoremap <leader>tl y<cr>:action activateterminaltoolwindow<cr>
+nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
+vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
+
+
+map <Leader>qq :source ~/.ideavimrc<CR> 
 
 
