@@ -1,6 +1,6 @@
 
 .ae : use assertEqual function
-    ANY  →  self.assertEqual($END$$e, xpr$)
+    ANY  →  self.assertEqual($END$, $expr$)
 
 .at : use assertTrue function
     ANY  →  self.assertTrue($expr$)$END$
