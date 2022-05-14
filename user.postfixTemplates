@@ -1,11 +1,16 @@
 
 .ae : use assertEqual function
     ANY  →  self.assertEqual($END$, $expr$)
+    
 
 .at : use assertTrue function
     ANY  →  self.assertTrue($expr$)$END$
 .af : use assertFalse function
     ANY  →  self.assertFalse($expr$)$END$
+    
+
+.aw : use await
+    ANY  →  await $expr$$END$
 
 
 
