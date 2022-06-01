@@ -41,6 +41,9 @@ nnoremap <Leader>tmv :action Move<CR>
 
 nnoremap <C-C> <Esc>
 " Max 客製化
+nnoremap <Leader>kk :action GotoAction<CR>git c
+
+
 map <S-j> <Nop>
 set nocompatible
 vmap ( <Nop>
@@ -53,12 +56,16 @@ map ) <Nop>
 map <Leader>ew cs
 
 " tab operation
-sethandler <A-S-h> a:ide
-sethandler <A-S-l> a:ide
+sethandler <A-S-h> n:ide
+sethandler <A-S-l> n:ide
 
 
 vnoremap o <ESC>o
 vnoremap O <ESC>ØO
+
+vnoremap <A-S-l> :action EditorNextWordWithSelection<CR>
+vnoremap <A-S-h> :action EditorPreviousWordWithSelection<CR>
+
 
 "inoremap <a-h> <C-o>:action EditorLineStart<CR>
 "vnoremap <a-h> <C-o>:action EditorLineStart<CR>
@@ -70,6 +77,7 @@ vnoremap O <ESC>ØO
 
 nnoremap <Leader>tt :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Leader>tfi :action IntroduceField<CR>
+nnoremap <Leader>oi :action OptimizeImports<CR>
 nnoremap <Leader>tva :action IntroduceVariable<CR>
 vnoremap <Leader>tva :action IntroduceVariable<CR>
 nnoremap <Leader>tme :action ExtractMethod<CR>
@@ -86,6 +94,8 @@ inoremap <A-k> <C-o>:action EditorSelectWord<CR>
 vnoremap <A-j> :action EditorUnSelectWord<CR>
 nnoremap <A-j> :action EditorUnSelectWord<CR>
 inoremap <A-j> <C-o>::action EditorUnSelectWord<CR>
+map <Leader>vH :action EditorLineStartWithSelection<CR>
+map <Leader>vL :action EditorLineEndWithSelection<CR>
 
 nnoremap <tab> >>_
 nnoremap <S-Tab> <<_
