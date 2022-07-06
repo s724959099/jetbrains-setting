@@ -97,6 +97,10 @@ inoremap <A-j> <C-o>::action EditorUnSelectWord<CR>
 map <Leader>vH :action EditorLineStartWithSelection<CR>
 map <Leader>vL :action EditorLineEndWithSelection<CR>
 
+
+
+
+
 nnoremap <tab> >>_
 nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
@@ -104,14 +108,19 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 vnoremap v<S-l> v$
+vnoremap <S-l> $
 nnoremap v<S-l> v$
 nnoremap v<S-h> v^
 vnoremap v<S-h> v^
+vnoremap <S-h> ^
+
 
 
 
 nnoremap d "_d
 vnoremap d "_d
+nnoremap D ""D
+vnoremap D ""D
 nnoremap c "_c
 vnoremap c "_c
 
