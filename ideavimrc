@@ -7,7 +7,7 @@ set ignorecase
 set smartcase
 set showmode
 set number
-set relativenumber
+" set relativenumber
 set scrolloff=0.1
 set history=100000
 set clipboard=unnamed
@@ -36,13 +36,12 @@ nnoremap <Leader>tc :action IntroduceConstant<CR>
 nnoremap <Leader>tem :action ExtractMethod<CR>
 nnoremap <Leader>tre :action RenameElement<CR>
 nnoremap <Leader>tmv :action Move<CR>
+vnoremap <Leader>tmv :action Move<CR>
 
 
 
 nnoremap <C-C> <Esc>
 " Max 客製化
-nnoremap <Leader>kk :action GotoAction<CR>git c
-
 
 map <S-j> <Nop>
 set nocompatible
@@ -55,16 +54,12 @@ map ) <Nop>
 
 map <Leader>ew cs
 
-" tab operation
-sethandler <A-S-h> n:ide
-sethandler <A-S-l> n:ide
-
 
 vnoremap o <ESC>o
 vnoremap O <ESC>ØO
 
-vnoremap <A-S-l> :action EditorNextWordWithSelection<CR>
-vnoremap <A-S-h> :action EditorPreviousWordWithSelection<CR>
+vnoremap <M-l> e
+vnoremap <M-h> b
 
 
 "inoremap <a-h> <C-o>:action EditorLineStart<CR>
@@ -76,8 +71,12 @@ vnoremap <A-S-h> :action EditorPreviousWordWithSelection<CR>
 
 
 nnoremap <Leader>tt :action Refactorings.QuickListPopupAction<CR>
+vnoremap <Leader>tt :action Refactorings.QuickListPopupAction<CR>
 nnoremap <Leader>tfi :action IntroduceField<CR>
+vnoremap <Leader>tfi :action IntroduceField<CR>
 nnoremap <Leader>oi :action OptimizeImports<CR>
+nnoremap <Leader>ti :action Inline<CR>
+vnoremap <Leader>ti :action Inline<CR>
 nnoremap <Leader>tva :action IntroduceVariable<CR>
 vnoremap <Leader>tva :action IntroduceVariable<CR>
 nnoremap <Leader>tme :action ExtractMethod<CR>
@@ -94,16 +93,13 @@ inoremap <A-k> <C-o>:action EditorSelectWord<CR>
 vnoremap <A-j> :action EditorUnSelectWord<CR>
 nnoremap <A-j> :action EditorUnSelectWord<CR>
 inoremap <A-j> <C-o>::action EditorUnSelectWord<CR>
-map <Leader>vH :action EditorLineStartWithSelection<CR>
-map <Leader>vL :action EditorLineEndWithSelection<CR>
-
-
 
 
 
 nnoremap <tab> >>_
 nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
+inoremap <tab> >>_
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
@@ -123,6 +119,9 @@ nnoremap D ""D
 vnoremap D ""D
 nnoremap c "_c
 vnoremap c "_c
+nnoremap s "_s
+vnoremap s "_s
+
 
 
 nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
@@ -131,11 +130,12 @@ nnoremap gE :action GotoPreviousError<CR>
 nnoremap <Leader>vfa :action VimFindActionIdAction<CR>
 nnoremap <Leader>ll :action ReformatCode<CR>
 nnoremap <Leader>zz :action Vcs.RollbackChangedLines<CR>
-nnoremap <Leader>es :action EditSourceInNewWindow<CR>
+nnoremap <Leader>nw :action EditSourceInNewWindow<CR>
 
-" Max 客製化 END
+ Max 客製化 END
 nnoremap <Leader>ct yydd
-
+nnoremap <Leader>;r :action Run<CR>
+nnoremap <Leader>;d :action Debug<CR>
 nnoremap <Leader>a :action GotoAction<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
@@ -149,9 +149,6 @@ nnoremap <Leader>pf :action GotoFile<CR>
 nnoremap fu :action FindUsages<CR>
 nnoremap <Leader>fu :action FindUsages<CR>
 
-" Quit normal mode
-nnoremap <Leader>q  :q<CR>
-nnoremap <Leader>Q  :qa!<CR>
 
 " Move half page faster
 nnoremap <Leader>d  <C-d>
@@ -266,6 +263,34 @@ nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
 
 nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
+
+nnoremap ;up :action Vcs.UpdateProject<CR>
+nnoremap ;cm :action CheckinProject<CR>
+nnoremap ;ps :action Vcs.Push<CR>
+nnoremap ;m :action Git.Menu<CR> 
+
+
+nnoremap <leader>, :action PreviousTab<CR>
+nnoremap <leader>. :action NextTab<CR>
+nnoremap <leader>zg :action Generate<CR>
+
+nnoremap }} :action VcsShowNextChangeMarker<CR>
+nnoremap {{ :action VcsShowPrevChangeMarker<CR>
+nnoremap ]] :action MethodDown<CR>
+nnoremap [[ :action MethodUp<CR>
+
+nnoremap <Leader>st :action ActivateStructureToolWindow<CR>
+nnoremap <Leader>sv :action ActivateSciViewToolWindow<CR>
+nnoremap <Leader>qcs :action QuickChangeScheme<CR>
+
+
+
+Plug 'preservim/nerdtree'
+map <c-n> :NERDTreeToggle<CR>
+":NERDTreeFocus
+":NERDTreeToggle
+":NERDTreeClose
+":NERDTreeFind
 
 
 map <Leader>qq :source ~/.ideavimrc<CR>
