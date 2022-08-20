@@ -8,7 +8,7 @@ set smartcase
 set showmode
 set number
 " set relativenumber
-set scrolloff=0.1
+set scrolloff=10
 set history=100000
 set clipboard=unnamed
 set clipboard+=ideapit
@@ -52,7 +52,13 @@ nmap ) <Nop>
 map ( <Nop>
 map ) <Nop>
 
-map <Leader>ew cs
+"map <Leader>ew cs
+
+
+vnoremap E b
+vnoremap W b
+nnoremap E b
+nnoremap W b
 
 
 vnoremap o <ESC>o
@@ -144,15 +150,14 @@ nnoremap sk :action PrevSplitter<CR>
 
 " project search
 nnoremap <Leader>se :action SearchEverywhere<CR>
-nnoremap <Leader>pf :action GotoFile<CR>
 
 nnoremap fu :action FindUsages<CR>
 nnoremap <Leader>fu :action FindUsages<CR>
 
 
 " Move half page faster
-nnoremap <Leader>d  <C-d>
-nnoremap <Leader>u  <C-u>
+nnoremap .. <C-d>
+nnoremap ,, <C-u>
 
 " Insert mode shortcut
 inoremap <M-h> <Left>
@@ -197,6 +202,8 @@ nnoremap <Leader>wj <C-W>j
 nnoremap <Leader>wk <C-W>k
 nnoremap <Leader>wh <C-W>h
 nnoremap <Leader>wl <C-W>l
+
+
 nnoremap <Leader>ws <C-W>s
 nnoremap <Leader>w- <C-W>s
 nnoremap <Leader>wv <C-W>v
@@ -282,6 +289,35 @@ nnoremap [[ :action MethodUp<CR>
 nnoremap <Leader>st :action ActivateStructureToolWindow<CR>
 nnoremap <Leader>sv :action ActivateSciViewToolWindow<CR>
 nnoremap <Leader>qcs :action QuickChangeScheme<CR>
+
+nnoremap dH d^
+nnoremap dL d$
+nnoremap cH "_c^
+nnoremap cL "_c$
+
+"start with z for useless
+nnoremap zot :action tasks.goto<CR>
+nnoremap zst :action tasks.switch<CR>
+nnoremap zd :action DupLocate<CR>
+nmap zz ysiw
+nmap zd ds
+nmap zc cs
+
+
+
+nnoremap <Leader>w<Right> <C-W>l
+nnoremap <Leader>w<Down> <C-W>j
+nnoremap <Leader>w<Up> <C-W>k
+nnoremap <Leader>w<Left> <C-W>h
+nnoremap <leader><Down> :action TabShiftActions.StretchDown<CR>
+nnoremap <leader><Up> :action TabShiftActions.StretchUp<CR>
+nnoremap <leader><Left> :action TabShiftActions.StretchLeft<CR>
+nnoremap <leader><Right> :action TabShiftActions.StretchRight<CR>
+
+noremap <leader>fl :action GotoNextElementUnderCaretUsage<CR>
+noremap <leader>fh :action GotoPrevElementUnderCaretUsage<CR>
+
+
 
 
 
