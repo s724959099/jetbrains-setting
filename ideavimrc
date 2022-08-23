@@ -17,6 +17,7 @@ set ideajoin
 
 Plug 'https://github.com/tpope/vim-surround'
 set surround
+:set keep-english-in-normal
 
 
 
@@ -93,12 +94,13 @@ nnoremap <Leader>tre :action RenameElement<CR>
 nnoremap <Leader><Leader>s :action SurroundWith<CR>
 vnoremap <Leader><Leader>s :action SurroundWith<CR>
 vnoremap <Leader>tsw :action SurroundWith<CR>
-vnoremap <A-k> :action EditorSelectWord<CR>
-nnoremap <A-k> :action EditorSelectWord<CR>
-inoremap <A-k> <C-o>:action EditorSelectWord<CR>
-vnoremap <A-j> :action EditorUnSelectWord<CR>
-nnoremap <A-j> :action EditorUnSelectWord<CR>
-inoremap <A-j> <C-o>::action EditorUnSelectWord<CR>
+
+vnoremap <M-k> :action EditorSelectWord<CR>
+nnoremap <M-k> :action EditorSelectWord<CR>
+inoremap <M-k> <C-o>:action EditorSelectWord<CR>
+vnoremap <M-j> :action EditorUnSelectWord<CR>
+nnoremap <M-j> :action EditorUnSelectWord<CR>
+inoremap <M-j> <C-o>:action EditorUnSelectWord<CR>
 
 
 
@@ -253,6 +255,8 @@ nnoremap <Leader>mv :action ActivateMavenProjectsToolWindow<CR>
 nnoremap <Leader>oi :action OptimizeImports<CR>
 
 nnoremap <Leader>pm :action ShowPopupMenu<CR>
+vnoremap <Leader>pm :action ShowPopupMenu<CR>
+
 
 "nnoremap <Leader>rc :action RunToCursor<CR>
 "nnoremap <Leader>rC :action ChooseRunConfiguration<CR>
@@ -319,6 +323,7 @@ noremap <leader>fh :action GotoPrevElementUnderCaretUsage<CR>
 
 
 
+nnormap <leader>m :action ShowPopupMenu<CR>
 
 
 Plug 'preservim/nerdtree'
