@@ -65,8 +65,14 @@ nnoremap W b
 vnoremap o <ESC>o
 vnoremap O <ESC>ØO
 
-vnoremap <M-S-L> e
-vnoremap <M-S-H> b
+vnoremap <A-l> e
+vnoremap <A-h> b
+nnoremap <A-l> :action EditorNextWord<CR>
+nnoremap <A-h> :action EditorPreviousWord<CR>
+inoremap <A-l> :action EditorNextWord<CR>
+inoremap <A-h> :action EditorPreviousWord<CR>
+
+
 
 
 "inoremap <a-h> <C-o>:action EditorLineStart<CR>
@@ -95,12 +101,12 @@ nnoremap <Leader><Leader>s :action SurroundWith<CR>
 vnoremap <Leader><Leader>s :action SurroundWith<CR>
 vnoremap <Leader>tsw :action SurroundWith<CR>
 
-vnoremap <M-k> :action EditorSelectWord<CR>
-nnoremap <M-k> :action EditorSelectWord<CR>
-inoremap <M-k> <C-o>:action EditorSelectWord<CR>
-vnoremap <M-j> :action EditorUnSelectWord<CR>
-nnoremap <M-j> :action EditorUnSelectWord<CR>
-inoremap <M-j> <C-o>:action EditorUnSelectWord<CR>
+vnoremap <A-k> :action EditorSelectWord<CR>
+nnoremap <A-k> :action EditorSelectWord<CR>
+inoremap <A-k> <C-o>:action EditorSelectWord<CR>
+vnoremap <A-j> :action EditorUnSelectWord<CR>
+nnoremap <A-j> :action EditorUnSelectWord<CR>
+inoremap <A-j> <C-o>:action EditorUnSelectWord<CR>
 
 
 
