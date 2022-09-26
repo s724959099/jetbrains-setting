@@ -8,7 +8,9 @@ set smartcase
 set showmode
 set number
 " set relativenumber
-set scrolloff=10
+set scrolloff=0
+set scrolloff=2
+
 set history=100000
 set clipboard=unnamed
 set clipboard+=ideapit
@@ -23,13 +25,17 @@ set surround
 
 
 
+nnoremap <C-k> gt
+nnoremap <C-j> gT
 
+nnoremap <S-k> :action EditorScrollUp<CR>
+nnoremap <S-j> :action EditorScrollDown<CR>
 
 " clear the highlighted search result
 nnoremap <Leader>sc :nohlsearch<CR>
 
 nnoremap <Leader>fs :w<CR>
-nnoremap <Leader>j :action AceTargetAction<CR>
+nnoremap <Leader>j :action AceWordStartAction<CR>
 nnoremap <Leader>tv :action IntroduceVariable<CR>
 nnoremap <Leader>tf :action IntroduceField<CR>
 nnoremap <Leader>tfp :action IntroduceFunctionalParameter<CR>
@@ -44,7 +50,7 @@ vnoremap <Leader>tmv :action Move<CR>
 nnoremap <C-C> <Esc>
 " Max 客製化
 
-map <S-j> <Nop>
+" map <S-j> <Nop>
 set nocompatible
 vmap ( <Nop>
 vmap ) <Nop>
@@ -291,10 +297,10 @@ nnoremap <leader>, :action PreviousTab<CR>
 nnoremap <leader>. :action NextTab<CR>
 nnoremap <leader>zg :action Generate<CR>
 
-nnoremap }} :action VcsShowNextChangeMarker<CR>
-nnoremap {{ :action VcsShowPrevChangeMarker<CR>
-nnoremap ]] :action MethodDown<CR>
-nnoremap [[ :action MethodUp<CR>
+nnoremap <leader>} :action VcsShowNextChangeMarker<CR>
+nnoremap <leader>{ :action VcsShowPrevChangeMarker<CR>
+nnoremap <leader>] :action MethodDown<CR>
+nnoremap <leader>[ :action MethodUp<CR>
 
 nnoremap <Leader>st :action ActivateStructureToolWindow<CR>
 nnoremap <Leader>sv :action ActivateSciViewToolWindow<CR>
@@ -305,10 +311,10 @@ nnoremap dL d$
 nnoremap cH "_c^
 nnoremap cL "_c$
 
-"start with z for useless
-nnoremap zot :action tasks.goto<CR>
-nnoremap zst :action tasks.switch<CR>
-nnoremap zd :action DupLocate<CR>
+"start with ; for useless
+nnoremap ;ot :action tasks.goto<CR>
+nnoremap ;st :action tasks.switch<CR>
+nnoremap ;d :action DupLocate<CR>
 nmap zz ysiw
 nmap zd ds
 nmap zc cs
@@ -329,7 +335,7 @@ noremap <leader>fh :action GotoPrevElementUnderCaretUsage<CR>
 
 
 
-nnormap <leader>m :action ShowPopupMenu<CR>
+noremap <leader>mm :action ShowPopupMenu<CR>
 
 
 Plug 'preservim/nerdtree'
