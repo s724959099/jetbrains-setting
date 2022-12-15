@@ -8,8 +8,9 @@ set smartcase
 set showmode
 set number
 " set relativenumber
-set scrolloff=0
-set scrolloff=2
+" set scrolloff=0
+set scrolloff=10
+set timeout timeoutlen=300 
 
 set history=100000
 set clipboard=unnamed
@@ -21,12 +22,31 @@ Plug 'https://github.com/tpope/vim-surround'
 set surround
 :set keep-english-in-normal
 
+"William setting
+"nnoremap <C-k> gt
+"nnoremap <C-j> gT
 
 
 
 
-nnoremap <C-k> gt
-nnoremap <C-j> gT
+nnoremap <S-M-k> gt
+nnoremap <S-M-j> gT
+inoremap <S-M-k> <ESC>gt
+inoremap <S-M-j> <ESC>gT
+vnoremap <S-M-k> gt
+vnoremap <S-M-j> gT
+
+
+
+nnoremap re "_ciw
+nnoremap p :action EditorSelectWord<CR>
+vnoremap p :action EditorSelectWord<CR>
+
+nnoremap P :action EditorUnSelectWord<CR>
+vnoremap P :action EditorUnSelectWord<CR>
+
+
+
 
 nnoremap <S-k> :action EditorScrollUp<CR>
 nnoremap <S-j> :action EditorScrollDown<CR>
@@ -36,6 +56,10 @@ nnoremap <Leader>sc :nohlsearch<CR>
 
 nnoremap <Leader>fs :w<CR>
 nnoremap <Leader>j :action AceWordStartAction<CR>
+vnoremap <Leader>j :action AceWordStartAction<CR>
+nnoremap f :action AceWordStartAction<CR>
+vnoremap f :action AceWordStartAction<CR>
+
 nnoremap <Leader>tv :action IntroduceVariable<CR>
 nnoremap <Leader>tf :action IntroduceField<CR>
 nnoremap <Leader>tfp :action IntroduceFunctionalParameter<CR>
@@ -186,6 +210,9 @@ inoremap <C-BS> <DELETE>
 inoremap jj <Esc>
 inoremap jk <Esc>
 inoremap kk <Esc>
+inoremap hhh <Esc>
+inoremap lll <Esc>
+
 
 
 " Quit visual mode
@@ -216,6 +243,8 @@ nnoremap <Leader>wj <C-W>j
 nnoremap <Leader>wk <C-W>k
 nnoremap <Leader>wh <C-W>h
 nnoremap <Leader>wl <C-W>l
+
+
 
 
 nnoremap <Leader>ws <C-W>s
@@ -293,14 +322,12 @@ nnoremap ;ps :action Vcs.Push<CR>
 nnoremap ;m :action Git.Menu<CR> 
 
 
-nnoremap <leader>, :action PreviousTab<CR>
-nnoremap <leader>. :action NextTab<CR>
 nnoremap <leader>zg :action Generate<CR>
 
-nnoremap <leader>} :action VcsShowNextChangeMarker<CR>
-nnoremap <leader>{ :action VcsShowPrevChangeMarker<CR>
-nnoremap <leader>] :action MethodDown<CR>
-nnoremap <leader>[ :action MethodUp<CR>
+nnoremap <leader>. :action VcsShowNextChangeMarker<CR>
+nnoremap <leader>, :action VcsShowPrevChangeMarker<CR>
+nnoremap mj :action MethodDown<CR>
+nnoremap mk :action MethodUp<CR>
 
 nnoremap <Leader>st :action ActivateStructureToolWindow<CR>
 nnoremap <Leader>sv :action ActivateSciViewToolWindow<CR>
@@ -315,9 +342,11 @@ nnoremap cL "_c$
 nnoremap ;ot :action tasks.goto<CR>
 nnoremap ;st :action tasks.switch<CR>
 nnoremap ;d :action DupLocate<CR>
-nmap zz ysiw
-nmap zd ds
-nmap zc cs
+
+nmap yw ysiw
+
+
+
 
 
 
@@ -332,6 +361,11 @@ nnoremap <leader><Right> :action TabShiftActions.StretchRight<CR>
 
 noremap <leader>fl :action GotoNextElementUnderCaretUsage<CR>
 noremap <leader>fh :action GotoPrevElementUnderCaretUsage<CR>
+
+noremap qk :action MethodUp<CR>
+noremap qj :action MethodDown<CR>
+
+
 
 
 
