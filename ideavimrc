@@ -10,7 +10,7 @@ set number
 " set relativenumber
 " set scrolloff=0
 set scrolloff=10
-set timeout timeoutlen=300 
+set timeout timeoutlen=300
 
 set history=100000
 set clipboard=unnamed
@@ -18,7 +18,8 @@ set clipboard+=ideapit
 set autoindent
 set ideajoin
 
-Plug 'https://github.com/tpope/vim-surround'
+
+Plug 'vim-surround'
 set surround
 :set keep-english-in-normal
 
@@ -172,7 +173,12 @@ nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 nnoremap ge :action GotoNextError<CR>
 nnoremap gE :action GotoPreviousError<CR>
 nnoremap <Leader>vfa :action VimFindActionIdAction<CR>
+
 nnoremap <Leader>ll :action ReformatCode<CR>
+vnoremap <Leader>ll :action ReformatCode<CR>
+" nnoremap <Leader>ll :action ReformatWithPrettierAction<CR>
+" vnoremap <Leader>ll :action ReformatWithPrettierAction<CR>
+
 nnoremap <Leader>zz :action Vcs.RollbackChangedLines<CR>
 nnoremap <Leader>nw :action EditSourceInNewWindow<CR>
 
@@ -231,7 +237,7 @@ nnoremap L $
 nnoremap U <C-r>
 
 " Yank to the end of line
-nnoremap Y y$
+" nnoremap Y y$
 
 " quit ==> close current window
 nnoremap <Leader>q <C-W>w
@@ -319,7 +325,8 @@ vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 nnoremap ;up :action Vcs.UpdateProject<CR>
 nnoremap ;cm :action CheckinProject<CR>
 nnoremap ;ps :action Vcs.Push<CR>
-nnoremap ;m :action Git.Menu<CR> 
+nnoremap ;m :action Git.Menu<CR>
+nnoremap ;b :action Git.Branches<CR>
 
 
 nnoremap <leader>zg :action Generate<CR>
@@ -343,7 +350,6 @@ nnoremap ;ot :action tasks.goto<CR>
 nnoremap ;st :action tasks.switch<CR>
 nnoremap ;d :action DupLocate<CR>
 
-nmap yw ysiw
 
 
 
