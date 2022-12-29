@@ -2,6 +2,22 @@
     "title": "Caps Lock Vim Movements (rev 2)",
     "rules": [
         {
+            "description": "caps_lock to escape",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": [
+                        {
+                            "key_code": "escape"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "description": "CAPS HJKL to arrow keys p/u PAGE UP/DOWN",
             "manipulators": [
                 {
@@ -172,16 +188,37 @@
             ]
         },
         {
-            "description": "escape to capes_lock",
+            "description": "grave_accent_and_tilde to right_shift",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "escape"
+                        "key_code": "grave_accent_and_tilde"
+                    },
+                    "to_if_alone": [
+                        {
+                            "key_code": "right_shift"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "ctrl+grave_accent_and_tilde to grave_accent_and_tilde",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ]
+                        },
+                        "key_code": "grave_accent_and_tilde"
                     },
                     "to": [
                         {
-                            "key_code": "caps_lock"
+                            "key_code": "grave_accent_and_tilde"
                         }
                     ]
                 }
