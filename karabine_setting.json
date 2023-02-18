@@ -2,22 +2,6 @@
     "title": "Caps Lock Vim Movements (rev 2)",
     "rules": [
         {
-            "description": "caps_lock to escape",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "caps_lock"
-                    },
-                    "to": [
-                        {
-                            "key_code": "escape"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "description": "CAPS HJKL to arrow keys p/u PAGE UP/DOWN",
             "manipulators": [
                 {
@@ -314,20 +298,20 @@
             ]
         },
         {
-            "description": "Shift + HJKL to arrow keys",
+            "description": "Shift + Option + HJKL to arrow keys",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
                         "key_code": "h",
                         "modifiers": {
-                            "mandatory": ["shift"]
+                            "mandatory": ["shift", "option"]
                         }
                     },
                     "to": [
                         {
                             "key_code": "left_arrow",
-                            "modifiers": ["shift"]
+                            "modifiers": ["shift", "option"]
                         }
                     ]
                 },
@@ -336,13 +320,13 @@
                     "from": {
                         "key_code": "j",
                         "modifiers": {
-                            "mandatory": ["shift"]
+                            "mandatory": ["shift", "option"]
                         }
                     },
                     "to": [
                         {
                             "key_code": "down_arrow",
-                            "modifiers": ["shift"]
+                            "modifiers": ["shift", "option"]
                         }
                     ]
                 },
@@ -351,13 +335,13 @@
                     "from": {
                         "key_code": "k",
                         "modifiers": {
-                            "mandatory": ["shift"]
+                            "mandatory": ["shift", "option"]
                         }
                     },
                     "to": [
                         {
                             "key_code": "up_arrow",
-                            "modifiers": ["shift"]
+                            "modifiers": ["shift", "option"]
                         }
                     ]
                 },
@@ -366,13 +350,94 @@
                     "from": {
                         "key_code": "l",
                         "modifiers": {
-                            "mandatory": ["shift"]
+                            "mandatory": ["shift", "option"]
                         }
                     },
                     "to": [
                         {
                             "key_code": "right_arrow",
-                            "modifiers": ["shift"]
+                            "modifiers": ["shift", "option"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Command + HJKL to arrow keys",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory": ["command"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": ["command"]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": ["command"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": ["command"]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": ["command"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": ["command"]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": ["command"]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": ["command"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "caps_lock to escape",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": [
+                        {
+                            "key_code": "escape"
                         }
                     ]
                 }
