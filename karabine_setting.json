@@ -298,130 +298,182 @@
             ]
         },
         {
-            "description": "Shift + Option + HJKL to arrow keys",
+            "description": "Caps Lock + nm,. to Option + arrow keys",
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": {
-                        "key_code": "h",
-                        "modifiers": {
-                            "mandatory": ["shift", "option"]
+                    "conditions": [
+                        {
+                            "name": "caps_lock pressed",
+                            "type": "variable_if",
+                            "value": 1
                         }
+                    ],
+                    "from": {
+                        "key_code": "n"
                     },
                     "to": [
                         {
                             "key_code": "left_arrow",
-                            "modifiers": ["shift", "option"]
+                            "modifiers": [
+                                "left_option"
+                            ]
                         }
                     ]
                 },
                 {
                     "type": "basic",
-                    "from": {
-                        "key_code": "j",
-                        "modifiers": {
-                            "mandatory": ["shift", "option"]
+                    "conditions": [
+                        {
+                            "name": "caps_lock pressed",
+                            "type": "variable_if",
+                            "value": 1
                         }
+                    ],
+                    "from": {
+                        "key_code": "m"
                     },
                     "to": [
                         {
                             "key_code": "down_arrow",
-                            "modifiers": ["shift", "option"]
+                            "modifiers": [
+                                "left_option"
+                            ]
                         }
                     ]
                 },
                 {
                     "type": "basic",
-                    "from": {
-                        "key_code": "k",
-                        "modifiers": {
-                            "mandatory": ["shift", "option"]
+                    "conditions": [
+                        {
+                            "name": "caps_lock pressed",
+                            "type": "variable_if",
+                            "value": 1
                         }
+                    ],
+                    "from": {
+                        "key_code": "comma"
                     },
                     "to": [
                         {
                             "key_code": "up_arrow",
-                            "modifiers": ["shift", "option"]
+                            "modifiers": [
+                                "left_option"
+                            ]
                         }
                     ]
                 },
                 {
                     "type": "basic",
-                    "from": {
-                        "key_code": "l",
-                        "modifiers": {
-                            "mandatory": ["shift", "option"]
+                    "conditions": [
+                        {
+                            "name": "caps_lock pressed",
+                            "type": "variable_if",
+                            "value": 1
                         }
+                    ],
+                    "from": {
+                        "key_code": "period"
                     },
                     "to": [
                         {
                             "key_code": "right_arrow",
-                            "modifiers": ["shift", "option"]
+                            "modifiers": [
+                                "left_option"
+                            ]
                         }
                     ]
                 }
             ]
         },
         {
-            "description": "Command + HJKL to arrow keys",
+            "description": "Caps Lock + yuio to Option + Shift + arrow keys",
             "manipulators": [
                 {
                     "type": "basic",
-                    "from": {
-                        "key_code": "h",
-                        "modifiers": {
-                            "mandatory": ["command"]
+                    "conditions": [
+                        {
+                            "name": "caps_lock pressed",
+                            "type": "variable_if",
+                            "value": 1
                         }
+                    ],
+                    "from": {
+                        "key_code": "y"
                     },
                     "to": [
                         {
                             "key_code": "left_arrow",
-                            "modifiers": ["command"]
+                            "modifiers": [
+                                "left_option",
+                                "left_shift"
+                            ]
                         }
                     ]
                 },
                 {
                     "type": "basic",
-                    "from": {
-                        "key_code": "j",
-                        "modifiers": {
-                            "mandatory": ["command"]
+                    "conditions": [
+                        {
+                            "name": "caps_lock pressed",
+                            "type": "variable_if",
+                            "value": 1
                         }
+                    ],
+                    "from": {
+                        "key_code": "u"
                     },
                     "to": [
                         {
                             "key_code": "down_arrow",
-                            "modifiers": ["command"]
+                            "modifiers": [
+                                "left_option",
+                                "left_shift"
+                            ]
                         }
                     ]
                 },
                 {
                     "type": "basic",
-                    "from": {
-                        "key_code": "k",
-                        "modifiers": {
-                            "mandatory": ["command"]
+                    "conditions": [
+                        {
+                            "name": "caps_lock pressed",
+                            "type": "variable_if",
+                            "value": 1
                         }
+                    ],
+                    "from": {
+                        "key_code": "i"
                     },
                     "to": [
                         {
                             "key_code": "up_arrow",
-                            "modifiers": ["command"]
+                            "modifiers": [
+                                "left_option",
+                                "left_shift"
+                            ]
                         }
                     ]
                 },
                 {
                     "type": "basic",
-                    "from": {
-                        "key_code": "l",
-                        "modifiers": {
-                            "mandatory": ["command"]
+                    "conditions": [
+                        {
+                            "name": "caps_lock pressed",
+                            "type": "variable_if",
+                            "value": 1
                         }
+                    ],
+                    "from": {
+                        "key_code": "o"
                     },
                     "to": [
                         {
                             "key_code": "right_arrow",
-                            "modifiers": ["command"]
+                            "modifiers": [
+                                "left_option",
+                                "left_shift"
+                            ]
                         }
                     ]
                 }
