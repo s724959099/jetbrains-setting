@@ -394,6 +394,29 @@
             ]
         },
         {
+            "description": "Caps Lock + q to Backspace",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "name": "caps_lock pressed",
+                            "type": "variable_if",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "q"
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "description": "caps_lock to escape",
             "manipulators": [
                 {
