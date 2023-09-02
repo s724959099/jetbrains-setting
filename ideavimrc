@@ -58,8 +58,11 @@ nnoremap <Leader>sc :nohlsearch<CR>
 nnoremap <Leader>fs :w<CR>
 nnoremap <Leader>j :action AceWordStartAction<CR>
 vnoremap <Leader>j :action AceWordStartAction<CR>
+nnoremap ff :action AceWordStartAction<CR>
+vnoremap ff :action AceWordStartAction<CR>
 nnoremap f :action AceWordStartAction<CR>
 vnoremap f :action AceWordStartAction<CR>
+
 
 nnoremap <Leader>tv :action IntroduceVariable<CR>
 nnoremap <Leader>tf :action IntroduceField<CR>
@@ -69,6 +72,13 @@ nnoremap <Leader>tem :action ExtractMethod<CR>
 nnoremap <Leader>tre :action RenameElement<CR>
 nnoremap <Leader>tmv :action Move<CR>
 vnoremap <Leader>tmv :action Move<CR>
+vnoremap <Leader>tcs :action ChangeSignature<CR>
+nnoremap <Leader>tcs :action ChangeSignature<CR>
+
+
+
+nnoremap <Leader>co :action com.github.simiacryptus.aicoder.EditorMenu<CR>
+vnoremap <Leader>co :action com.github.simiacryptus.aicoder.EditorMenu<CR>
 
 
 
@@ -373,9 +383,9 @@ noremap qj :action MethodDown<CR>
 
 
 
-
-
 noremap <leader>mm :action ShowPopupMenu<CR>
+
+
 
 
 Plug 'preservim/nerdtree'
@@ -387,5 +397,8 @@ map <c-n> :NERDTreeToggle<CR>
 
 
 map <Leader>qq :source ~/.ideavimrc<CR>
+
+vnoremap <leader>n :'<,'>s/[(,]/&\r/g<CR> :action ReformatCode<CR> :nohlsearch<CR>
+nnoremap <leader>) :s/)/,)<CR>
 
 
