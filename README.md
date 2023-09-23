@@ -1,13 +1,10 @@
 # 從Notepad++到JetBrains：我的IDE之旅
----
-aliases: [jetbrains, pycharm, webstorm,  vim, acejump, ide, copilot, chatgpt]
----
 # 這邊不會說什麼
 - 不會有精美的 PPT 只會有樸實無華的日常操作
 - 不會說 JetBrains 基本的介紹，這個一堆影片都在教了，我只會講我平常看到一堆人不會做的事情，一般會講的這些皮毛自己看看就好
 - 不會說任何 ai 的技術，我最多只會給你們安麗 chatgpt4 還有 copilot/tabnine/ai assistant 這些強大的 ai 工具
-- vim 太簡單的我不想說，太難的我又講不了，我不會講的太深，因為他博大精神我也是淺淺的微笑，就像烏梅子醬，我只講我平常的使用方式
-	- 你最少要了解什麼是 normal/visual/normal mode 跟 hjkl 這些是什麼
+- ~~vim 太簡單的我不想說，太難的我又講不了，我不會講的太深，因為他博大精神我也是淺淺的微笑，就像烏梅子醬，我只講我平常的使用方式
+	- ~~你最少要了解什麼是 normal/visual/normal mode 跟 hjkl 這些是什麼
 - vscode，因為我完全不會，摸了兩天還是會回到JetBrains，想學 vscode 出門左轉
 - 同理，Windows 出門左轉，有些東西在 windows 上的東西我其實也不是很懂，畢竟我只有 Mac
 - 學會這些不會讓你變成大神，只會讓你變成一個更成熟的程式搬運工（碼農）
@@ -45,6 +42,46 @@ Reference:https://www.youtube.com/results?search_query=91+%E6%A5%B5%E9%80%9F%E9%
 - 我非常歡迎隨時跟我討論（我很喜歡討論這種事情，也許你的問題也可以幫助我更加完善我的系統）
 - 上 91 課程
 - follow 91 極速開發 或是 kata 相關訊息
+
+# Vim
+1. **Modes in Vim**
+    
+    - Normal Mode: For navigation and basic operations
+    - Insert Mode: For text editing
+    - Visual Mode: For text selection
+2. **Basic Commands**
+    
+    - `:w` to save
+    - `:q` to quit
+    - `:wq` to save and quit
+    - `i` to enter Insert Mode
+    - `Esc` to exit to Normal Mode
+3. **Navigation**
+    
+    - `h`, `j`, `k`, `l` for moving cursor
+    - `gg` to go to the top
+    - `G` to go to the bottom
+4. **Search and Replace**
+    
+    - `/` to search
+    - `:%s/old/newm/g` to replace all occurrences
+5. **Text Manipulation**
+    
+    - `dd` to delete a line
+    - `yy` to yank/copy a line
+    - `p` to paste
+6. **Undo and Redo**
+    
+    - `u` to undo
+    - `Ctrl + r` to redo
+7. **Plug-ins and Customization**
+    
+    - Explain that Vim can be customized with plug-ins
+8. **Getting Help**
+    
+    - `:help` to open Vim's help documentation
+
+These topics give a solid foundation for a Vim newbie.
 # JetBrains
 他的付費解鎖以後功能真的很強大，身為工程師投資點錢在自己的工具上不為過吧？
 但是我接下來會安麗的東西的確有些都要錢
@@ -85,9 +122,11 @@ Pycharm only，但是我非常喜歡的，平常要寫一些 demo code 的話我
 ## 好用的 plugins
 
 ### Auto Completion
-- AI Assistant
+- ~~AI Assistant
 - Github Copilot
 - Tabnine
+- Codium
+- CodeGPT
 ### UI
 - Indent Rainbow
 - Rainbow Brackets Lite
@@ -137,15 +176,20 @@ Note2: 其實 yy 也只是因為他是基於某些單字 比如 p: past, y: yank
 
 ### 常用的按鍵
 leader: space
+- shift+esc close tool window
 - 很多的 shift 通常是往回一個 
 - ctrl+G select 重複的單字
 - w/e or shift+w/e select previous/next word
+- shift+i / shift+a 最左 最右 insert append
 - shift+hl 最左邊最右邊  / insert mode: shift+cmd+hl
 - shift+v 整個 line
 - v then (shift)+w/e
 - s/d/S/C
 - v+u or ~ 大小寫
 - option+shift+j/k multiple cursor
+- yip -> 複製段落
+- shift+cmd+\[ or shift+\] -> move to previous/next space
+- 
 
 - f: acejump
 - p/shift+p select multiple chunks
@@ -194,6 +238,43 @@ nnoremap <Leader>wv <C-W>v
 nnoremap <Leader>w\| <C-W>v  
 nnoremap <Leader>wm :action MoveEditorToOppositeTabGroup<CR>
 ```
+## Refactor this
+1. **Rename**
+    
+    - 用法：重新命名變量、函數、類等
+2. **Change Signature**
+    
+    - 用法：更改函數的參數、返回值等
+3. **Move**
+    
+    - 用法：移動文件、類、函數到其他位置
+4. **Extract Method**
+    
+    - 用法：提取代碼片段到一個新的方法
+5. **Extract Variable**
+    
+    - 用法：提取代碼片段到一個新的變量
+6. **Extract Field**
+    
+    - 用法：提取代碼片段到一個新的字段（類變量）
+7. **Extract Constant**
+    
+    - 用法：提取代碼片段到一個新的常量
+8. **Inline**
+    
+    - 用法：將變量、方法、或常量的值直接放回其被調用的地方
+9. **Extract Superclass**
+    
+    - 用法：創建一個新的父類，並將選定的方法和字段從當前類移到父類
+10. **Pull Members Up**
+    
+    - 用法：將子類的字段或方法移到父類
+11. **Push Members Down**
+    
+    - 用法：將父類的字段或方法移到子類
+
+這些功能專門用於代碼重構，有助於使代碼更加結構化和易於維護。
+
 # Karabiner
 Setting Referenece:https://github.com/s724959099/jetbrains-setting/blob/master/karabine_setting.json
 #### 設定說明
@@ -226,6 +307,17 @@ Setting Referenece:https://github.com/s724959099/jetbrains-setting/blob/master/k
     
     - 把 `Caps Lock` 鍵轉換成 `Escape` 鍵。
 
+```
+- right_cmd + w: mouse up
+- right_cmd + a: mouse left
+- right_cmd + s: mouse down
+- right_cmd + d: mouse right
+- right_cmd + f: left click
+- right_cmd + g: right click
+- right_cmd + r: scroll up
+- right_cmd + v: scroll down
+```
+
 最關鍵的就是 Caps Lock，加上 hjkl 可以讓你平時做文書編輯的時候 不一定要在 coding 才可以模擬 vim，而且 Caps Lock 本身對應 `ESC` 按鍵，在 vim 的操作下其實你會很成按 `ESC` 但是其實他的距離有點遠，如果換成 Caps Lock 的話距離其實近很多，加上按的頻率差很多
 我自己的個人理念是，盡量手指在 asdf jkl; 這些上 盡量不要移動超過這個地方
 
@@ -235,7 +327,29 @@ Note: 2, 3 點是為了個人需求 ，因為我同時搭配了超注音這個�
 小插曲: 另外我個人非常推薦這個輸入法 `超注音` 如果是有用注音且喜歡不用打完整猜你打的字的話，可以試試看，但是需要付費，一次性的，我個人覺得非常值得，但是我沒有收到他們的贊助，我的幅度就不會過多的介紹 XDD（開玩笑的），是因為太簡單了 就是單純一個分享而已。
 
 我曾經想要嘗試大陸的拼音輸入法，但是不太習慣，且要花的時間過多，所以如果你本身就是在用注音的人可以無痛轉換
+# Raycast
+- Raycast 是一個 Mac 工具，用於快速執行各種任務。
+- 通過鍵盤快捷鍵可以快速訪問和控制應用程式。
 
+### 好用功能
+
+1. **快速啟動應用**: 只需幾個鍵盤操作，即可打開任何應用。
+2. **搜尋文件**: 快速找到和打開您的文件。
+3. **執行指令**: 可以直接在 Raycast 裡執行 shell 指令。
+4. **工作流**: 可以自定義一系列操作，用一個快捷鍵執行。
+5. **集成其他服務**: 如 Jira, GitHub 等，直接在工具裡完成操作，不用打開瀏覽器。
+
+這個工具對於想要提高生產力的人來說非常有用。希望這個簡單的介紹對您有幫助！有其他問題隨時問。
+### Quicklinks
+![[Pasted image 20230905113434.png]]
+### Window management
+![[Pasted image 20230905113652.png]]
+
+### Snippet
+![[Pasted image 20230905113814.png]]
+
+### Clipboard History
+![[Pasted image 20230905113950.png]]
 
 # Chrome-extension
 ## [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb/related)
@@ -260,3 +374,62 @@ unmap b
 - Comand t/w command+shift+t 都是基操勿6 
 - yt: duplicate current tab
 - W: move current tab to new window
+
+
+
+# 作業
+## Legacy code
+Reference: https://www.youtube.com/watch?v=Rryo6CoKamE
+Original github: https://github.com/emilybache/GildedRose-Refactoring-Kata
+Youtuber's github: https://github.com/ArjanCodes/examples/tree/main/2023/gildedrose
+
+### Tennis
+### Roman Numerals（羅馬數字轉換）
+
+#### 題目描述：
+
+- 實現一個函數，它能將給定的整數（1-3999）轉換成對應的羅馬數字。
+- 同時實現另一個函數，能將給定的羅馬數字轉換成對應的整數。
+
+#### 羅馬數字規則：
+
+- I: 1
+- IV: 4
+- V: 5
+- IX: 9
+- X: 10
+- XL: 40
+- L: 50
+- XC: 90
+- C: 100
+- CD: 400
+- D: 500
+- CM: 900
+- M: 1000
+
+#### 測試案例：
+
+1. 整數轉羅馬數字
+    
+    - Input: 4
+    - Output: "IV"
+    - Input: 9
+    - Output: "IX"
+    - Input: 42
+    - Output: "XLII"
+    - Input: 3999
+    - Output: "MMMCMXCIX"
+2. 羅馬數字轉整數
+    
+    - Input: "IV"
+    - Output: 4
+    - Input: "IX"
+    - Output: 9
+    - Input: "XLII"
+    - Output: 42
+    - Input: "MMMCMXCIX"
+    - Output: 3999
+
+#### 設計注意：
+
+- 使用TDD（Test-Driven Development）開發，先寫測試，再實現函數。
